@@ -18,8 +18,6 @@ const config = {
     ],
     root: [
       `${sourceFolder}/main.webmanifest`,
-      `${sourceFolder}/favicon.svg`,
-      `${sourceFolder}/mask-desktop.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
     htmlPages: `${sourceFolder}/html/pages/**/*.html`,

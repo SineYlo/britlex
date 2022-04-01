@@ -1,8 +1,9 @@
 // |=============== CONNECTING EXTERNAL MODULES ===============>
-// import module_name from 'module-name';
+import 'focus-visible';
 
-// |=============== SCRIPT CONNECTION |  ===============>
-// |=============== SCRIPT CONNECTION |  ===============>
-// |=============== SCRIPT CONNECTION |  ===============>
-// |=============== SCRIPT CONNECTION |  ===============>
-// |=============== SCRIPT CONNECTION |  ===============>
+// |=============== SCRIPT CONNECTION | PRELOADER ===============>
+import './components/home/_preloader';
+// |=============== SCRIPT CONNECTION | BURGER ===============>
+import './components/home/_burger';
+// |=============== SCRIPT CONNECTION | SUPER PLACEHOLDER ===============>
+import './components/home/_placeholder';

@@ -1,7 +1,6 @@
 {
-  "name": "project-name",
+  "name": "britlex",
   "version": "1.0.0",
-  "description": "Some description of the project.",
   "main": "gulpfile.babel.js",
   "scripts": {
     "prepare": "husky install",
@@ -27,21 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SineYlo/Starter-Template.git"
+    "url": "git+https://github.com/SineYlo/britlex.git"
   },
-  "keywords": [
-    "keyword-1",
-    "keyword-2",
-    "keyword-3",
-    "keyword-4",
-    "keyword-5"
-  ],
   "author": "SineYlo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SineYlo/Starter-Template/issues"
+    "url": "https://github.com/SineYlo/britlex/issues"
   },
-  "homepage": "https://github.com/SineYlo/Starter-Template#readme",
+  "homepage": "https://github.com/SineYlo/britlex#readme",
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
@@ -95,5 +87,10 @@
     "stylelint-scss": "^4.2.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0",
+    "scroll-lock": "^2.1.5",
+    "superplaceholder": "^1.0.0"
   }
 }

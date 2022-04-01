@@ -10,12 +10,21 @@
 @import "layout/ui/global/ui";
 // |=============== CONNECTING PLUGIN SETTINGS ===============>
 @import "config/settings/global/settings";
+// |=============== CONNECTING PRELOADER ===============>
+@import "components/home/preloader";
 // |=============== CONNECTING THE GLOBAL SITE HEADER ===============>
 @import "components/global/header";
 // |----->
-// |=============== CONNECTING THE SECTION | ===============>
-// |=============== CONNECTING THE SECTION | ===============>
-// |=============== CONNECTING THE SECTION | ===============>
+// |=============== CONNECTING THE SECTION | HERO ===============>
+@import "components/home/hero";
+// |=============== CONNECTING THE SECTION | SKILLS ===============>
+@import "components/home/skills";
+// |=============== CONNECTING THE SECTION | ABOUT US ===============>
+@import "components/home/about-us";
+// |=============== CONNECTING THE SECTION | PRICING ===============>
+@import "components/home/pricing";
+// |=============== CONNECTING THE SECTION | CONTACT US ===============>
+@import "components/home/contact-us";
 // |----->
 // |=============== CONNECTING THE GLOBAL FOOTER SITE ===============>
 @import "components/global/footer";

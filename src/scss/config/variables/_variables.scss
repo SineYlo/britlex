@@ -1,143 +1,66 @@
 // |=============== CONTAINER ===============>
 // |CM| Width and indents of the container
-$contentWidth: 0;
-$contentFluidWidth: 0;
-$containerOffset: 0;
-$containerFluidOffset: 0;
+$contentWidth: 1340px;
+$containerOffset: 31px;
 $containerWidth: $contentWidth + ($containerOffset * 2);
-$containerFluidWidth: $contentFluidWidth + ($containerFluidOffset * 2);
 
 // |=============== FONT-FAMILY ===============>
 // |CM| Main font-family
-$primaryFontFamily: null;
-// |CM| Additional font-families
-$secondFontFamily: null;
-$thirdFontFamily: null;
-$fourthFontFamily: null;
+$primaryFontFamily: "Poppins", system-ui;
 
 // |=============== COLOR ===============>
-// |CM| Change favorite color (Color name - )
-$hueColor: null;
+// |CM| Change favorite color (Gunmetal - 200)
+$hueColor: 200;
 // |CM| HSL color mode
-$primaryColor: null;
-$secondColor: null;
-$thirdColor: null;
-$fourthColor: null;
-$fifthColor: null;
-$sixthColor: null;
-$seventhColor: null;
-$eighthColor: null;
-$ninthColor: null;
-$tenthColor: null;
-$eleventhColor: null;
-$twelfthColor: null;
-$thirteenthColor: null;
-$fourteenthColor: null;
-$fifteenthColor: null;
-$sixteenthColor: null;
-$seventeenthColor: null;
-$eighteenthColor: null;
-$nineteenthColor: null;
-$twentiethColor: null;
-$twentyFirstColor: null;
-$twentySecondColor: null;
-$twentyThirdColor: null;
-$twentyFourthColor: null;
-$twentyFifthColor: null;
-$twentySixthColor: null;
-$twentySeventhColor: null;
-$twentyEighthColor: null;
-$twentyNinthColor: null;
-$thirtiethColor: null;
+$primaryColor: hsl($hueColor 19% 18%);
+$secondColor: hsl($hueColor 11% 37%);
+$thirdColor: hsl($hueColor 24% 29%);
+$fourthColor: hsl($hueColor 73% 11% / 0.7);
+$fifthColor: hsl(223 11% 60%);
+$sixthColor: hsl(223 25% 22%);
+$seventhColor: hsl(0 0% 96%);
+$eighthColor: hsl(0 0% 93%);
+$ninthColor: hsl(0 0% 77%);
 // |CM| Universal colors
 $whiteColor: hsl(0 0% 100%);
 $blackColor: hsl(0 0% 0%);
 
 // |=============== FONT-WEIGHT ===============>
 // |CM| Main font-weight
-$primaryFontWeight: null;
+$primaryFontWeight: 500;
 // |CM| Additional font-weights
-$secondFontWeight: null;
-$thirdFontWeight: null;
-$fourthFontWeight: null;
-$fifthFontWeight: null;
+$secondFontWeight: 600;
 
 // |=============== FONT-SIZE ===============>
 // |CM| Base font-size ( .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...)
-$textSizeBase: null;
+$textSizeBase: 16px;
 // |CM| Different font-size options
-$textSizeMinTiny: $textSizeBase - null;
-$textSizeMinSmall: $textSizeBase - null;
-$textSizeMinMedium: $textSizeBase - null;
-$textSizeMinBig: $textSizeBase - null;
-$textSizeMinLarge: $textSizeBase - null;
-$textSizeMinHuge: $textSizeBase - null;
-$textSizeTiny: $textSizeBase - null;
-$textSizeSmall: $textSizeBase - null;
-$textSizeMedium: $textSizeBase + null;
-$textSizeBig: $textSizeBase + null;
-$textSizeLarge: $textSizeBase + null;
-$textSizeHuge: $textSizeBase + null;
-$textSizeMaxTiny: $textSizeBase + null;
-$textSizeMaxSmall: $textSizeBase + null;
-$textSizeMaxMedium: $textSizeBase + null;
-$textSizeMaxBig: $textSizeBase + null;
-$textSizeMaxLarge: $textSizeBase + null;
-$textSizeMaxHuge: $textSizeBase + null;
-
-// |=============== LINE-HEIGHT ===============>
-// |CM| Main line-height
-$primaryLh: null;
-// |CM| Additional lines-heights
-$secondLh: null;
-$thirdLh: null;
-$fourthLh: null;
-$fifthLh: null;
-$sixthLh: null;
-$seventhLh: null;
-$eighthLh: null;
-$ninthLh: null;
-$tenthLh: null;
+$textSizeMinLarge: $textSizeBase - 5px;
+$textSizeMinHuge: $textSizeBase - 4px;
+$textSizeTiny: $textSizeBase - 3px;
+$textSizeSmall: $textSizeBase - 2px;
+$textSizeMedium: $textSizeBase + 2px;
+$textSizeBig: $textSizeBase + 4px;
+$textSizeLarge: $textSizeBase + 6px;
+$textSizeHuge: $textSizeBase + 8px;
+$textSizeMaxTiny: $textSizeBase + 14px;
+$textSizeMaxSmall: $textSizeBase + 18px;
+$textSizeMaxMedium: $textSizeBase + 20px;
+$textSizeMaxBig: $textSizeBase + 32px;
+$textSizeMaxLarge: $textSizeBase + 48px;
 
 // |=============== BORDER-RADIUS ===============>
 // |CM| Main border-radius
-$primaryBr: null;
+$primaryBr: 5px;
 // |CM| Additional border-radiuses
-$secondBr: null;
-$thirdBr: null;
-$fourthBr: null;
-$fifthBr: null;
-$sixthBr: null;
-$seventhBr: null;
-$eighthBr: null;
-$ninthBr: null;
-$tenthBr: null;
-
-// |=============== GAP ===============>
-// |CM| Specifying a fallback color for background images
-$primaryGap: null;
-$secondGap: null;
-$thirdGap: null;
-$fourthGap: null;
-$fifthGap: null;
-$sixthGap: null;
-$seventhGap: null;
-$eighthGap: null;
-$ninthGap: null;
-$tenthGap: null;
+$secondBr: 10px;
+$thirdBr: 15px;
 
 // |=============== TRANSITION ===============>
 // |CM| Duration of effects (most effective 0.2 to 0.4s)
 $fastTransitionDuration: 0.2s;
 $mediumTransitionDuration: 0.3s;
 $slowTransitionDuration: 0.4s;
-
-// |=============== ANIMATIONS ===============>
-// |CM| Duration of animations (most effective 0.2 to 0.5s)
-$fastAnimationDuration: 0.2s;
-$mediumAnimationDuration: 0.3s;
-$slowAnimationDuration: 0.4s;
-$verySlowAnimationDuration: 0.5s;
 
 // |=============== Z-INDEX ===============>
 // |CM| Ready z-index values for different components

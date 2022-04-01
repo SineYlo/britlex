@@ -1,2 +1,4 @@
 // |=============== CONNECTING FONTS ===============>
-// @include addFont($nameFontFamily, $pathToWoff2, $pathToWoff, $fw, $fs);
+@include addFont(Poppins, poppins/poppins-regular, poppins/poppins-regular, 400, normal);
+@include addFont(Poppins, poppins/poppins-medium, poppins/poppins-medium, 500, normal);
+@include addFont(Poppins, poppins/poppins-semibold, poppins/poppins-semibold, 600, normal);
