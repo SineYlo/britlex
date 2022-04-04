@@ -6,3 +6,44 @@
     position: relative;
   }
 }
+
+.body {
+  padding: 55px 0;
+  font-family: $primaryFontFamily;
+  font-size: $textSizeBase;
+
+  &__preloader {
+    @include flex;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    background-color: $whiteColor;
+  }
+}
+
+.container {
+  @include containerBase($containerWidth, $containerOffset);
+}
+
+.title {
+  font-weight: $secondFontWeight;
+  font-size: $textSizeMaxBig;
+  line-height: lhNumeric($textSizeMaxBig, 80px);
+}
+
+.sub-title {
+  font-weight: $secondFontWeight;
+  font-size: $textSizeMaxTiny;
+}
+
+.desc {
+  font-size: $textSizeBig;
+  line-height: lhNumeric($textSizeBig, 30px);
+  color: $fifthColor;
+}

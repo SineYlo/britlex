@@ -1,0 +1,88 @@
+.section-pricing {
+  &_indent {
+    margin-bottom: 261px;
+  }
+
+  &__title {
+    margin-bottom: 57px;
+    text-align: center;
+  }
+}
+
+.list-pricing {
+  @include grid;
+
+  grid-auto-rows: minmax(582px, auto);
+  grid-template-columns: minmax(auto, 418px) minmax(auto, 367px) minmax(auto, 435px);
+  grid-template-rows: minmax(582px, auto);
+  gap: 60px;
+
+  &__item {
+    padding-top: 349px;
+    background-repeat: no-repeat;
+
+    &_online {
+      grid-column: 1 / 2;
+      background-image: url("../img/sprites/sprite.svg#fv-online-test-bg");
+      background-position: top center;
+      background-size: percentageOfNumber(311px, 418px) 311px;
+    }
+
+    &_lesson {
+      grid-column: 2 / 3;
+      background-image: url("../img/sprites/sprite.svg#fv-lesson-bg");
+      background-position: top 12px left;
+      background-size: percentageOfNumber(367px, 367px) 265px;
+    }
+
+    &_webinar {
+      grid-column: 3 / 4;
+      background-image: url("../img/sprites/sprite.svg#fv-webinar-bg");
+      background-position: top left 47px;
+      background-size: percentageOfNumber(340px, 435px) 340px;
+    }
+  }
+
+  &__content {
+    @include flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    line-height: lhNumeric($textSizeMaxTiny, 48px);
+  }
+
+  &__desc {
+    margin-bottom: auto;
+  }
+
+  &__currency {
+    margin-top: 20px;
+  }
+}
+
+.currency-pricing {
+  @include f-center;
+
+  border-radius: $primaryBr;
+  padding: 0 17px;
+  min-width: 240px;
+  background-color: $eighthColor;
+
+  &__amount {
+    margin-right: 11px;
+    font-size: $textSizeMaxTiny;
+    line-height: lhNumeric($textSizeMaxTiny, 45px);
+    color: $primaryColor;
+  }
+
+  &__period {
+    font-size: $textSizeMedium;
+    line-height: lhNumeric($textSizeMedium, 27px);
+    color: $secondColor;
+  }
+}

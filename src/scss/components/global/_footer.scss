@@ -1,0 +1,53 @@
+.site-footer {
+  &__container {
+    @include f-center-sb;
+  }
+}
+
+.list-footer {
+  @include f-center-sb;
+
+  &__item:not(:last-child) {
+    position: relative;
+    margin-right: 33px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: calc(50% - 3px);
+      display: inline-block;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      background-color: $fifthColor;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    font-size: $textSizeHuge;
+    line-height: lhNumeric($textSizeHuge, 36px);
+    color: $fifthColor;
+    transition: color $mediumTransitionDuration ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      color: $primaryColor;
+    }
+
+    @include hover {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+
+    &:active {
+      color: $fourthColor;
+    }
+  }
+}

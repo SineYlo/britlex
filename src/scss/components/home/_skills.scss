@@ -1,0 +1,112 @@
+.section-skills {
+  &_indent {
+    margin-bottom: 252px;
+  }
+
+  &__title {
+    margin-bottom: 93px;
+    text-align: center;
+  }
+}
+
+.list-skills {
+  @include grid;
+
+  column-gap: 19px;
+  grid-auto-rows: minmax(343px, auto);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: minmax(531px, auto) minmax(343px, auto);
+  row-gap: 20px;
+
+  &__item {
+    @include flex;
+
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    grid-column: span 4;
+    border-radius: $secondBr;
+    padding: 44px;
+    background-repeat: no-repeat;
+    background-color: $seventhColor;
+
+    &_speaking {
+      grid-row: 1 / -1;
+      padding-top: 450px;
+      background-image: url("../img/sprites/sprite.svg#fv-speaking-bg");
+      background-position: 21px 22px;
+      background-size: percentageOfNumber(390px, 434px) 390px;
+    }
+
+    &_writing {
+      padding-top: 250px;
+      background-image: url("../img/sprites/sprite.svg#fv-writing-bg");
+      background-position: right 21px top;
+      background-size: 254px 254px;
+    }
+
+    &_reading {
+      padding-top: 230px;
+      background-image: url("../img/sprites/sprite.svg#fv-reading-bg");
+      background-position: left top 24px;
+      background-size: 304px 202px;
+    }
+
+    &_listening {
+      grid-column: span 8;
+      background-image: url("../img/sprites/sprite.svg#fv-listening-bg");
+      background-position: right 44px top 44px;
+      background-size: percentageOfNumber(382px, 887px) 255px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    line-height: lhNumeric($textSizeMaxTiny, 45px);
+  }
+
+  &__desc {
+    max-width: 346px;
+    line-height: lhNumeric($textSizeBase, 24px);
+    color: $fifthColor;
+
+    &:not(&_first) {
+      margin-bottom: 30px;
+    }
+
+    &_first {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__more {
+    display: inline-block;
+    border-radius: $primaryBr;
+    padding: 15px 51px 15px 52px;
+    font-weight: $primaryFontWeight;
+    font-size: $textSizeBig;
+    line-height: lhNumeric($textSizeBig, 30px);
+    color: $whiteColor;
+    background-color: $primaryColor;
+    transition: background-color $fastTransitionDuration ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      background-color: $secondColor;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
+
+    &:active {
+      background-color: $thirdColor;
+    }
+  }
+}

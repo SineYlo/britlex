@@ -1,0 +1,44 @@
+.preloader {
+  &__spinner {
+    display: grid;
+    border: 6px solid hsl(0 0% 0% / 0);
+    border-right-color: $primaryColor;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    animation: spinner 1s infinite linear;
+
+    &::before,
+    &::after {
+      content: "";
+      grid-area: 1 / 1;
+      margin: 3px;
+      border: inherit;
+      border-radius: 50%;
+      animation: spinner 2s infinite;
+    }
+
+    &::after {
+      margin: 12px;
+      animation-duration: 3s;
+    }
+  }
+
+  .loader-hidden & {
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: $fastTransitionDuration;
+    transition-timing-function: ease-in-out;
+  }
+
+  .loaded & {
+    display: none;
+  }
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(1turn);
+  }
+}

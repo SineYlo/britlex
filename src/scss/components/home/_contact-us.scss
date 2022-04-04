@@ -1,0 +1,91 @@
+.section-contact {
+  padding-bottom: 40px;
+
+  &__container {
+    @include f-jc-sb;
+
+    position: relative;
+    padding-bottom: 131px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: $containerOffset;
+      bottom: 0;
+      width: calc(100% - ($containerOffset * 2));
+      height: 1px;
+      background-color: $ninthColor;
+    }
+  }
+}
+
+.content-contact {
+  padding-top: 33px;
+  width: percentageOfNumber(769px, $contentWidth);
+
+  &__title {
+    margin-bottom: 37px;
+  }
+
+  &__desc {
+    margin-bottom: 49px;
+  }
+}
+
+.form-contact {
+  @include flex;
+
+  &__email {
+    margin-right: 12px;
+    border: 1px solid currentColor;
+    border-radius: $secondBr;
+    padding-left: 28px;
+    width: min(100%, 450px);
+    height: 80px;
+    line-height: lhNumeric($textSizeBase, 24px);
+    color: $fifthColor;
+    transition: border-color $fastTransitionDuration ease-in-out;
+
+    &::placeholder {
+      line-height: inherit;
+      color: currentColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      border-color: $thirdColor;
+    }
+  }
+
+  &__subscribe {
+    border-radius: $secondBr;
+    padding: 25px 81px 25px 82px;
+    font-weight: $primaryFontWeight;
+    font-size: $textSizeBig;
+    line-height: lhNumeric($textSizeBig, 30px);
+    color: $whiteColor;
+    background-color: $primaryColor;
+    transition: background-color $fastTransitionDuration ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      background-color: $secondColor;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
+
+    &:active {
+      background-color: $thirdColor;
+    }
+  }
+}

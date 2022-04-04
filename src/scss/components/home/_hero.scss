@@ -1,0 +1,83 @@
+.section-hero {
+  &_indent {
+    margin-bottom: 106px;
+  }
+
+  &__container {
+    @include f-jc-sb;
+  }
+
+  &__picture {
+    width: percentageOfNumber(661px, $contentWidth);
+  }
+}
+
+.content-hero {
+  padding-top: 53px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    margin-bottom: 58px;
+    max-width: 521px;
+    font-size: $textSizeHuge;
+    line-height: lhNumeric($textSizeHuge, 36px);
+    color: $fifthColor;
+  }
+
+  &__get-started {
+    display: inline-block;
+    border-radius: $thirdBr;
+    padding: 32px 117px 32px 118px;
+    font-size: $textSizeMaxMedium;
+    line-height: lhNumeric($textSizeMaxMedium, 54px);
+    color: $whiteColor;
+    background-color: $primaryColor;
+    transition: background-color $fastTransitionDuration ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      background-color: $secondColor;
+    }
+
+    @include hover {
+      &:hover {
+        background-color: $secondColor;
+      }
+    }
+
+    &:active {
+      background-color: $thirdColor;
+    }
+  }
+}
+
+.title-hero {
+  max-width: 386px;
+  font-weight: $secondFontWeight;
+  font-size: $textSizeMaxLarge;
+  line-height: lhNumeric($textSizeMaxLarge, 80px);
+  text-transform: capitalize;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -139px;
+    top: 107px;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url("../img/sprites/sprite.svg#icon-light-bulb-bg") 0 0 no-repeat;
+    transform: rotate(38deg);
+  }
+
+  &__word {
+    display: block;
+  }
+}

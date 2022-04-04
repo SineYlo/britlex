@@ -1,0 +1,51 @@
+.section-about {
+  &_indent {
+    margin-bottom: 191px;
+  }
+
+  &__container {
+    @include f-jc-sb;
+  }
+}
+
+.content-about {
+  padding-top: 33px;
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__desc {
+    margin-bottom: 25px;
+    max-width: 644px;
+  }
+}
+
+.list-about {
+  @include flex;
+
+  &__item {
+    @include flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: percentageOfNumber(120px, 644px);
+    }
+  }
+
+  &__number {
+    margin-bottom: 12px;
+    font-weight: $secondFontWeight;
+    font-size: $textSizeMaxBig;
+    line-height: lhNumeric($textSizeMaxBig, 80px);
+    color: $sixthColor;
+  }
+
+  &__explanation {
+    font-size: $textSizeBig;
+    line-height: lhNumeric($textSizeBig, 30px);
+    color: $fifthColor;
+  }
+}
