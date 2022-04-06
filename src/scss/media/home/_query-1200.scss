@@ -1,0 +1,332 @@
+@media screen and (max-width: 75em) {
+  .body {
+    padding: 25px 0;
+  }
+
+  .container {
+    max-width: 992px;
+  }
+
+  .title {
+    font-size: $textSizeMaxMedium;
+  }
+
+  .sub-title {
+    font-size: $textSizeLarge;
+  }
+
+  .desc {
+    font-size: $textSizeBase;
+  }
+
+  .site-header {
+    &_indent {
+      margin-bottom: 68px;
+    }
+  }
+
+  .logo-header {
+    &__picture {
+      width: 89px;
+      height: 45px;
+    }
+  }
+
+  .overlay {
+    width: percentageOfNumber(674px, 930px);
+  }
+
+  .content-header {
+    &__sign-up {
+      padding: 10px 39px 9px;
+      font-size: $textSizeMedium;
+    }
+  }
+
+  .nav-header {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 31px;
+      }
+    }
+
+    &__link {
+      font-size: $textSizeBase;
+    }
+  }
+
+  .section-hero {
+    &_indent {
+      margin-bottom: 59px;
+    }
+
+    &__picture {
+      width: percentageOfNumber(460px, 930px);
+      height: 460px;
+    }
+  }
+
+  .content-hero {
+    padding-top: 16px;
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__desc {
+      margin-bottom: 32px;
+      max-width: 422px;
+      font-size: $textSizeBig;
+    }
+
+    &__get-started {
+      border-radius: $primaryBr;
+      padding: 22px 78px 22px 79px;
+      font-size: $textSizeHuge;
+    }
+  }
+
+  .title-hero {
+    max-width: 290px;
+    font-size: $textSizeMaxBig;
+    line-height: lhNumeric($textSizeMaxBig, 64px);
+
+    &::after {
+      right: -83px;
+      top: 99px;
+      width: 59px;
+      height: 59px;
+    }
+  }
+
+  .section-skills {
+    &_indent {
+      margin-bottom: 58px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  .list-skills {
+    grid-auto-rows: minmax(252px, auto);
+    grid-template-rows: minmax(462px, auto) minmax(252px, auto);
+    gap: 30px;
+
+    &__item {
+      padding: 24px;
+
+      &_speaking {
+        background-position: 15px 15px;
+        background-size: percentageOfNumber(260px, 290px) 260px;
+      }
+
+      &_writing {
+        background-position: top right;
+        background-size: 205px 205px;
+      }
+
+      &_reading {
+        background-position: top 15px left;
+        background-size: 243px 162px;
+      }
+
+      &_listening {
+        background-position: top 36px right 18px;
+        background-size: percentageOfNumber(254px, 610px) 169px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__desc {
+      font-size: $textSizeSmall;
+
+      &_first {
+        margin-bottom: 15px;
+      }
+
+      &:not(&_first) {
+        margin-bottom: 20px;
+      }
+
+      &_listening {
+        max-width: 242px;
+      }
+    }
+
+    &__more {
+      padding: 15px 46px 15px 47px;
+      font-size: $textSizeMedium;
+    }
+  }
+
+  .section-about {
+    &_indent {
+      margin-bottom: 113px;
+    }
+
+    &__picture {
+      align-self: flex-end;
+      width: 336px;
+      height: 336px;
+    }
+  }
+
+  .content-about {
+    padding: 12px 0 25px;
+
+    &__desc {
+      margin-bottom: 22px;
+      max-width: 525px;
+    }
+  }
+
+  .list-about {
+    &__item {
+      &:not(:last-child) {
+        margin-right: percentageOfNumber(81px, 525px);
+      }
+    }
+
+    &__number {
+      margin-bottom: 10px;
+      font-size: $textSizeMaxTiny;
+      line-height: lhNumeric($textSizeMaxTiny, 45px);
+    }
+
+    &__explanation {
+      font-size: $textSizeBase;
+    }
+  }
+
+  .section-pricing {
+    &_indent {
+      margin-bottom: 131px;
+    }
+
+    &__title {
+      margin-bottom: 19px;
+    }
+  }
+
+  .list-pricing {
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+
+    &__item {
+      grid-column: span 4;
+      padding-top: 254px;
+
+      &_online {
+        background-position: center top 16px;
+        background-size: percentageOfNumber(222px, 290px) 222px;
+      }
+
+      &_lesson {
+        background-position: center top 30px;
+        background-size: percentageOfNumber(267px, 290px) 195px;
+      }
+
+      &_webinar {
+        background-position: center top 6px;
+        background-size: percentageOfNumber(242px, 290px) 242px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      line-height: lhNumeric($textSizeLarge, 33px);
+    }
+
+    &__currency {
+      margin-top: 9px;
+    }
+  }
+
+  .currency-pricing {
+    padding: 5px 18px 4px;
+    min-width: 210px;
+
+    &__amount {
+      margin-right: 10px;
+      font-size: $textSizeHuge;
+    }
+
+    &__period {
+      font-size: $textSizeBase;
+    }
+  }
+
+  .section-contact {
+    padding-bottom: 21px;
+
+    &__container {
+      padding-bottom: 163px;
+    }
+
+    &__picture {
+      width: 312px;
+      height: 281px;
+    }
+  }
+
+  .content-contact {
+    padding-top: 12px;
+    width: percentageOfNumber(530px, 930px);
+
+    &__title {
+      margin-bottom: 23px;
+    }
+
+    &__desc {
+      margin-bottom: 22px;
+      max-width: 445px;
+    }
+  }
+
+  .form-contact {
+    &__email {
+      margin-right: 15px;
+      padding-left: 20px;
+      height: 60px;
+      font-size: $textSizeSmall;
+    }
+
+    &__subscribe {
+      padding: 18px 56px;
+      font-size: $textSizeBase;
+    }
+  }
+
+  .logo-footer {
+    &__picture {
+      width: 89px;
+      height: 45px;
+    }
+  }
+
+  .list-footer {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 17px;
+
+        &::after {
+          right: -11px;
+          top: calc(50% - 2px);
+          width: 4px;
+          height: 4px;
+        }
+      }
+    }
+
+    &__link {
+      font-size: $textSizeBase;
+    }
+  }
+}
