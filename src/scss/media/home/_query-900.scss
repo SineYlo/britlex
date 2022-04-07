@@ -1,0 +1,467 @@
+@media screen and (max-width: 56.25em) {
+  .body {
+    padding: 39px 0;
+  }
+
+  .container {
+    padding: 0 39px;
+    max-width: 768px;
+  }
+
+  .title {
+    font-size: $textSizeMaxTiny;
+  }
+
+  .sub-title {
+    font-size: $textSizeBig;
+  }
+
+  .desc {
+    font-size: $textSizeSmall;
+  }
+
+  .site-header {
+    &_indent {
+      margin-bottom: 40px;
+    }
+
+    &__logo {
+      position: relative;
+      z-index: 12;
+    }
+
+    &__overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+    }
+
+    &__content {
+      position: relative;
+    }
+
+    &__burger {
+      position: relative;
+    }
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: $fourthColor;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: center;
+    transition-property: opacity, visibility, transform;
+    transition-duration: $fastTransitionDuration;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &.ui-burger-active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      transition-delay: 0s;
+    }
+  }
+
+  .content-header {
+    @include blockBeyond(690px, 39px);
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 105px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    height: 100vh;
+    max-width: 429px;
+    background-color: $whiteColor;
+    transform: scaleX(0);
+    transition: transform $fastTransitionDuration ease-in-out;
+
+    &.ui-burger-active {
+      transform: scaleX(1);
+      transition-delay: 0.2s;
+    }
+
+    &__close {
+      position: absolute;
+      right: 15px;
+      top: 22px;
+      display: inline-block;
+      width: 39px;
+      height: 39px;
+      background: url("../img/sprites/sprite.svg#icon-close-bg") center no-repeat;
+      transition: opacity $fastTransitionDuration ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.focus-visible {
+        opacity: 0.7;
+      }
+
+      @include hover {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    &__nav {
+      margin-bottom: 62px;
+    }
+
+    &__sign-up {
+      padding: 15px 63px 14px;
+    }
+  }
+
+  .nav-header {
+    overflow-y: auto;
+    border-top: 1px solid $ninthColor;
+    padding-top: 35px;
+    width: 100%;
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      font-size: $textSizeLarge;
+      line-height: lhNumeric($textSizeLarge, 60px);
+      color: $blackColor;
+    }
+  }
+
+  .burger-header {
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible &__line {
+      opacity: 0.7;
+    }
+
+    @include hover {
+      &:hover &__line {
+        opacity: 0.7;
+      }
+    }
+
+    &:active &__line {
+      opacity: 0.5;
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 3px;
+      background-color: $thirdColor;
+      transition: opacity $fastTransitionDuration ease-in-out;
+
+      &_first {
+        top: 0;
+      }
+
+      &_second {
+        top: calc(50% - 2px);
+      }
+
+      &_first,
+      &_second {
+        width: 100%;
+      }
+
+      &_third {
+        bottom: 0;
+        width: calc(100% - 9px);
+      }
+    }
+  }
+
+  .section-hero {
+    &_indent {
+      margin-bottom: 73px;
+    }
+
+    &__picture {
+      width: percentageOfNumber(340px, 690px);
+      height: 340px;
+    }
+  }
+
+  .content-hero {
+    padding-top: 30px;
+
+    &__title {
+      max-width: 217px;
+    }
+
+    &__desc {
+      margin-bottom: 30px;
+      max-width: 338px;
+      font-size: $textSizeBase;
+    }
+
+    &__get-started {
+      padding: 19px 67px;
+      font-size: $textSizeMedium;
+    }
+  }
+
+  .title-hero {
+    font-size: $textSizeMaxMedium;
+    line-height: lhNumeric($textSizeMaxMedium, 45px);
+
+    &::after {
+      right: -61px;
+      top: 76px;
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  .section-skills {
+    &_indent {
+      margin-bottom: 47px;
+    }
+
+    &__title {
+      margin-bottom: 49px;
+    }
+  }
+
+  .list-skills {
+    grid-template-rows: minmax(441px, auto) minmax(221px, auto);
+
+    &__item {
+      padding: 9px;
+
+      &_speaking {
+        padding-top: 220px;
+        background-position: 8px 10px;
+        background-size: percentageOfNumber(194px, 210px) 194px;
+      }
+
+      &_writing {
+        padding-top: 190px;
+        background-position: top 10px right 17px;
+        background-size: percentageOfNumber(176px, 210px) 176px;
+      }
+
+      &_reading {
+        padding-top: 160px;
+        background-position: top 20px left;
+        background-size: percentageOfNumber(190px, 210px) 126px;
+      }
+
+      &_listening {
+        background-position: top 45px right 9px;
+        background-size: percentageOfNumber(180px, 450px) 119px;
+      }
+    }
+
+    &__desc {
+      font-size: $textSizeTiny;
+      line-height: lhNumeric($textSizeTiny, 20px);
+
+      &_first {
+        margin-bottom: 10px;
+      }
+
+      &:not(&_first) {
+        margin-bottom: 15px;
+      }
+
+      &_listening {
+        max-width: 220px;
+      }
+    }
+
+    &__more {
+      padding: 13px 43px;
+      font-size: $textSizeBase;
+    }
+  }
+
+  .section-about {
+    &_indent {
+      margin-bottom: 84px;
+    }
+
+    &__picture {
+      width: 295px;
+      height: 295px;
+    }
+  }
+
+  .content-about {
+    padding: 17px 0 0;
+
+    &__desc {
+      margin-bottom: 16px;
+      max-width: 321px;
+    }
+  }
+
+  .list-about {
+    &__item {
+      &:not(:last-child) {
+        margin-right: percentageOfNumber(46px, 321px);
+      }
+    }
+
+    &__number {
+      margin-bottom: 5px;
+      font-size: $textSizeLarge;
+    }
+
+    &__explanation {
+      font-size: $textSizeTiny;
+      line-height: lhNumeric($textSizeTiny, 20px);
+    }
+  }
+
+  .section-pricing {
+    &_indent {
+      margin-bottom: 58px;
+    }
+
+    &__title {
+      margin-bottom: 39px;
+    }
+  }
+
+  .list-pricing {
+    &__item {
+      padding-top: 225px;
+
+      &_online {
+        background-position: top left;
+        background-size: percentageOfNumber(210px, 210px) 210px;
+      }
+
+      &_lesson {
+        background-position: center top 32px;
+        background-size: percentageOfNumber(210px, 210px) 161px;
+      }
+
+      &_webinar {
+        background-position: top left;
+        background-size: percentageOfNumber(210px, 210px) 210px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+
+      &_online {
+        max-width: 174px;
+      }
+
+      &_lesson {
+        max-width: 112px;
+      }
+
+      &_webinar {
+        max-width: 94px;
+      }
+    }
+
+    &__currency {
+      margin-top: 10px;
+    }
+  }
+
+  .section-contact {
+    padding-bottom: 33px;
+
+    &__container {
+      padding-bottom: 102px;
+
+      &::before {
+        left: 39px;
+        width: calc(100% - calc(39px * 2));
+      }
+    }
+
+    &__picture {
+      width: 233px;
+      height: 210px;
+    }
+  }
+
+  .content-contact {
+    padding-top: 17px;
+    width: percentageOfNumber(434px, 690px);
+
+    &__title {
+      margin-bottom: 19px;
+    }
+
+    &__desc {
+      margin-bottom: 9px;
+      max-width: 389px;
+    }
+  }
+
+  .form-contact {
+    &__email {
+      margin-right: 6px;
+      border-radius: $primaryBr;
+      padding-left: 16px;
+      width: min(100%, 283px);
+      height: 50px;
+      font-size: $textSizeMinHuge;
+    }
+
+    &__subscribe {
+      border-radius: $primaryBr;
+      padding: 13px 40px;
+      font-size: $textSizeTiny;
+      line-height: lhNumeric($textSizeTiny, 20px);
+    }
+  }
+
+  .list-footer {
+    transform: translateY(3px);
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 14px;
+
+        &::after {
+          right: -7px;
+          width: 3px;
+          height: 3px;
+        }
+      }
+    }
+
+    &__link {
+      font-size: $textSizeTiny;
+      line-height: lhNumeric($textSizeTiny, 20px);
+    }
+  }
+}
