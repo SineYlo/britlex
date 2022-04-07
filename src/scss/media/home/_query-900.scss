@@ -53,7 +53,7 @@
     opacity: 0;
     visibility: hidden;
     transform: scale(0);
-    transform-origin: center;
+    transform-origin: top right;
     transition-property: opacity, visibility, transform;
     transition-duration: $fastTransitionDuration;
     transition-delay: 0.2s;
@@ -176,6 +176,7 @@
       position: absolute;
       left: 0;
       display: inline-block;
+      border-radius: 1px;
       height: 3px;
       background-color: $thirdColor;
       transition: opacity $fastTransitionDuration ease-in-out;

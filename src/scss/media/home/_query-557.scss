@@ -1,0 +1,319 @@
+@media screen and (max-width: 34.8125em) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: $textSizeHuge;
+  }
+
+  .sub-title {
+    font-size: $textSizeMedium;
+  }
+
+  .desc {
+    font-size: $textSizeTiny;
+  }
+
+  .site-header {
+    &_indent {
+      margin-bottom: 25px;
+    }
+  }
+
+  .logo-header {
+    &__picture {
+      width: 71px;
+      height: 36px;
+    }
+  }
+
+  .burger-header {
+    width: 33px;
+    height: 19px;
+
+    &__line {
+      height: 3px;
+
+      &_second {
+        top: calc(50% - 1px);
+      }
+
+      &_third {
+        width: calc(100% - 10px);
+      }
+    }
+  }
+
+  .content-header {
+    @include blockBeyond(100%, 15px);
+  }
+
+  .section-hero {
+    &_indent {
+      margin-bottom: 72px;
+    }
+
+    &__picture {
+      width: 290px;
+      height: 290px;
+    }
+  }
+
+  .content-hero {
+    @include f-ai-center;
+
+    flex-direction: column;
+    padding-top: 26px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      margin-bottom: 14px;
+      max-width: 274px;
+      font-size: $textSizeSmall;
+    }
+
+    &__get-started {
+      padding: 18px 99px;
+      font-size: $textSizeBase;
+    }
+  }
+
+  .title-hero {
+    font-size: $textSizeHuge;
+    line-height: lhNumeric($textSizeHuge, 36px);
+  }
+
+  .section-skills {
+    &_indent {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      margin-bottom: 51px;
+    }
+  }
+
+  .list-skills {
+    grid-auto-rows: minmax(473px, auto);
+    grid-template-rows: minmax(600px, auto) minmax(473px, auto);
+    row-gap: 21px;
+
+    &__item {
+      justify-content: flex-end;
+      background-position: center 16px;
+
+      &_speaking {
+        padding-top: 220px;
+        background-size: 213px 213px;
+      }
+
+      &_writing {
+        padding-top: 190px;
+        background-size: 204px 204px;
+      }
+
+      &_reading {
+        padding-top: 160px;
+        background-size: 236px 157px;
+      }
+
+      &_listening {
+        background-size: 232px 154px;
+      }
+    }
+
+    &__desc {
+      max-width: 100%;
+      font-size: $textSizeTiny;
+      line-height: lhNumeric($textSizeTiny, 20px);
+
+      &_first {
+        margin-bottom: 10px;
+      }
+
+      &:not(&_first) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__more {
+      padding: 15px 49px 14px;
+    }
+  }
+
+  .section-about {
+    &_indent {
+      margin-bottom: 93px;
+    }
+
+    &__container {
+      padding-top: 95px;
+    }
+
+    &__picture {
+      width: 290px;
+      height: 290px;
+    }
+  }
+
+  .content-about {
+    padding-top: 22px;
+
+    &__title {
+      top: 21px;
+    }
+
+    &__desc {
+      margin-bottom: 24px;
+      line-height: lhNumeric($textSizeTiny, 20px);
+    }
+  }
+
+  .list-about {
+    flex-direction: column;
+
+    &__item {
+      &:not(:last-child) {
+        margin: 0 0 23px;
+      }
+    }
+
+    &__number {
+      margin-bottom: 12px;
+    }
+  }
+
+  .list-pricing {
+    grid-auto-rows: auto;
+    grid-template-rows: minmax(443px, auto) minmax(372px, auto) minmax(241px, auto);
+    row-gap: 80px;
+
+    &__item {
+      &_online {
+        padding-top: 276px;
+        background-size: 248px 248px;
+      }
+
+      &_lesson {
+        padding-top: 224px;
+        background-size: 257px 197px;
+      }
+
+      &_webinar {
+        padding-top: 268px;
+        background-size: 241px 241px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__desc {
+      margin-bottom: 30px;
+    }
+  }
+
+  .currency-pricing {
+    padding: 5px 13px;
+    min-width: 170px;
+
+    &__amount {
+      font-size: $textSizeMedium;
+    }
+
+    &__period {
+      font-size: $textSizeSmall;
+    }
+  }
+
+  .section-contact {
+    padding-bottom: 32px;
+
+    &__container {
+      padding-top: 144px;
+      padding-bottom: 60px;
+
+      &::before {
+        left: 15px;
+        width: calc(100% - 30px);
+      }
+    }
+
+    &__picture {
+      margin-bottom: 31px;
+      width: 253px;
+      height: 228px;
+    }
+  }
+
+  .content-contact {
+    &__title {
+      padding-top: 33px;
+    }
+
+    &__desc {
+      margin-bottom: 39px;
+      font-size: $textSizeSmall;
+    }
+  }
+
+  .form-contact {
+    position: static;
+    flex-direction: column;
+
+    &__email {
+      margin-bottom: 17px;
+      border-radius: $primaryBr;
+      padding: 16px;
+      height: 50px;
+      font-size: $textSizeMinHuge;
+    }
+
+    &__subscribe {
+      position: static;
+      border-radius: $primaryBr;
+      padding: 20px 109px 19px 110px;
+      font-size: $textSizeSmall;
+      text-align: center;
+    }
+  }
+
+  .site-footer {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 16px;
+    }
+  }
+
+  .logo-footer {
+    &__picture {
+      width: 71px;
+      height: 36px;
+    }
+  }
+
+  .list-footer {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 11px;
+
+        &::after {
+          right: -8px;
+          top: 50%;
+        }
+      }
+    }
+
+    &__link {
+      font-size: $textSizeMinLarge;
+    }
+  }
+}

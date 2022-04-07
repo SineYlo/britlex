@@ -1,0 +1,55 @@
+@media screen and (max-width: 47.9375em) {
+  .list-skills {
+    grid-auto-rows: minmax(534px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(231px, 1fr));
+    grid-template-rows: repeat(2, minmax(534px, auto));
+
+    &__item {
+      justify-content: flex-start;
+      grid-column: span 1;
+      grid-row: span 1;
+      padding: 15px;
+      background-position: center 10px;
+
+      &_speaking {
+        padding-top: 194px;
+        background-size: percentageOfNumber(167px, 240px) 167px;
+      }
+
+      &_writing {
+        padding-top: 194px;
+        background-size: percentageOfNumber(167px, 240px) 167px;
+      }
+
+      &_reading {
+        padding-top: 159px;
+        background-size: percentageOfNumber(198px, 240px) 132px;
+      }
+
+      &_listening {
+        padding-top: 159px;
+        background-size: percentageOfNumber(198px, 240px) 132px;
+      }
+    }
+
+    &__desc {
+      &:not(&_first) {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .list-pricing {
+    &__item {
+      grid-column: 1 / -1;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+  }
+}

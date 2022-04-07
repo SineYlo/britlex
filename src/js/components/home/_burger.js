@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 const burgerBtnOpen = document.querySelector('.site-header__burger');
@@ -32,4 +33,10 @@ navLinks.forEach((el) => {
   el.addEventListener('click', () => {
     closingMenu();
   });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closingMenu();
+  }
 });
