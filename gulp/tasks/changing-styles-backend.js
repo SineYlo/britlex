@@ -11,7 +11,6 @@ import postcssClipPath from 'postcss-clip-path-polyfill';
 import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
-import shorthand from 'gulp-shorthand';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import { config } from '../config';
@@ -60,7 +59,6 @@ const changingStylesBackend = () => {
       grid: 'autoplace',
       overrideBrowserslist: ['last 5 versions'],
     }))
-    .pipe(shorthand())
     .pipe(rename({
       dirname: '',
     }))

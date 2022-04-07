@@ -12,7 +12,6 @@ import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
-import shorthand from 'gulp-shorthand';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
@@ -65,7 +64,6 @@ const changingStyles = () => {
     .pipe(gulpIf(config.isProd, autoprefixer({
       overrideBrowserslist: ['last 5 versions'],
     })))
-    .pipe(gulpIf(config.isProd, shorthand()))
     .pipe(rename({
       dirname: '',
     }))
