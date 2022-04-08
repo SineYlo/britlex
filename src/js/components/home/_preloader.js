@@ -2,7 +2,6 @@ import {
   disablePageScroll,
   enablePageScroll,
   addFillGapTarget,
-  setFillGapMethod,
 } from 'scroll-lock';
 
 const siteBody = document.querySelector('.body');
@@ -10,7 +9,6 @@ const sitePreloader = document.querySelector('.preloader');
 
 disablePageScroll(sitePreloader);
 addFillGapTarget(sitePreloader);
-setFillGapMethod('max-width');
 
 window.addEventListener('load', () => {
   window.setTimeout(() => {

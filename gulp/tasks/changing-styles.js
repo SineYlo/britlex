@@ -70,7 +70,7 @@ const changingStyles = () => {
     .pipe(gulpIf(config.isDev, sourcemaps.write()))
     .pipe(dest(config.build.styles))
     .pipe(gulpIf(config.isProd, cleanCSS({
-      level: 2,
+      level: 1,
     })))
     .pipe(rename({
       extname: '.min.css',
